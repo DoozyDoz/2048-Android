@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -40,6 +39,10 @@
             android:name=".ColorPickerActivity"
             android:label="@string/color_picker"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
 
     </application>
 

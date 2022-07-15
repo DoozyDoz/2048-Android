@@ -77,4 +77,13 @@
     <string name="new_features_title">What\'s new?</string>
     <string name="new_features_positive_btn">OK</string>
     <string name="message_new_features">Snapshot saving/loading has been added to the game</string>
+
+    <!--admob ids-->
+    <string name="admob_app_id" translatable="false">ca-app-pub-2151402137157381~2256419712</string>
+    <string name="admob_banner_id" translatable="false">ca-app-pub-2151402137157381/6046463242</string>
+    <string name="admob_interstitial" translatable="false">ca-app-pub-2151402137157381/5880804100</string>
+    <string name="admob_openads" translatable="false">ca-app-pub-2151402137157381/9602564878</string>
+    <string name="admob_test" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_test_inter" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_test_rcyc" translatable="false">ca-app-pub-3940256099942544/4177191030</string>
 </resources>
