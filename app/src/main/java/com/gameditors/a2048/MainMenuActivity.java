@@ -41,9 +41,6 @@ import com.google.android.gms.tasks.Task;
 
 import org.json.JSONObject;
 
-import ir.adad.ad.AdadAdListener;
-import ir.adad.banner.AdadBannerAd;
-import ir.adad.core.Adad;
 
 
 public class MainMenuActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener
@@ -90,28 +87,28 @@ public class MainMenuActivity extends AppCompatActivity implements PopupMenu.OnM
         ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
-        if(activeNetwork != null && activeNetwork.isConnectedOrConnecting())
-        {
-            Adad.initialize("0fb16c39-0c78-408f-985e-917f3a3d6972");
-
-            ((AdadBannerAd)findViewById(R.id.banner_ad_view)).setAdListener(new AdadAdListener()
-            {
-                @Override
-                public void onLoaded() { }
-
-                @Override
-                public void onShowed() { }
-
-                @Override
-                public void onActionOccurred(int code) { }
-
-                @Override
-                public void onError(int code, String message) { }
-
-                @Override
-                public void onClosed() { }
-            });
-        }
+//        if(activeNetwork != null && activeNetwork.isConnectedOrConnecting())
+//        {
+//            Adad.initialize("0fb16c39-0c78-408f-985e-917f3a3d6972");
+//
+//            ((AdadBannerAd)findViewById(R.id.banner_ad_view)).setAdListener(new AdadAdListener()
+//            {
+//                @Override
+//                public void onLoaded() { }
+//
+//                @Override
+//                public void onShowed() { }
+//
+//                @Override
+//                public void onActionOccurred(int code) { }
+//
+//                @Override
+//                public void onError(int code, String message) { }
+//
+//                @Override
+//                public void onClosed() { }
+//            });
+//        }
 
         // Create the client used to sign in to Google services.
         mGoogleSignInClient = GoogleSignIn.getClient(this,
@@ -142,30 +139,6 @@ public class MainMenuActivity extends AppCompatActivity implements PopupMenu.OnM
     {
         switch (view.getId())
         {
-            /*
-            case R.id.btn_ballz:
-                try
-                {
-                    Intent ballz = new Intent(Intent.ACTION_MAIN);
-                    ballz.setComponent(new ComponentName("com.gameditors.ballz","com.unity3d.player.UnityPlayerActivity"));
-                    startActivity(ballz);
-                }
-                catch (ActivityNotFoundException anfe)
-                {
-                    try
-                    {
-                        Intent ballzOnCafeBazaar = new Intent(Intent.ACTION_VIEW);
-                        ballzOnCafeBazaar.setData(Uri.parse("bazaar://details?id=com.gameditors.ballz"));
-                        ballzOnCafeBazaar.setPackage("com.farsitel.bazaar");
-                        startActivity(ballzOnCafeBazaar);
-                    }
-                    catch (ActivityNotFoundException anfe2) // for bazaar activity not found exception
-                    {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://cafebazaar.ir/app/com.gameditors.ballz")));
-                    }
-                }
-                break;
-                */
             case R.id.btn_start_4x4:
                 StartGame(4);
                 break;
